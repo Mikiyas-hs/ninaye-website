@@ -14,21 +14,23 @@
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
   font-family: var(--font-metrophobic), sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 6rem;
   line-height: 1.1;
 }
 
 h2 {
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 1.2;
 }
 
 p {
-  font-size: 18px;
+  font-size: 1rem;
 }
