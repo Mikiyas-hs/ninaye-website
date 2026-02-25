@@ -24,6 +24,16 @@
   }
 }
 
+@media (min-width: 48rem) {
+  .banner {
+    min-height: 2.5rem;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
 @keyframes typing {
   from { max-width: 0; }
   to { max-width: 36ch; }
