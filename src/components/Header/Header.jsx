@@ -9,14 +9,17 @@ export default function Header() {
         <Image src="/icons/hamburger.png" alt="Open navigatiemenu" width={24} height={24} />
       </button>
 
-      <Link href="/" className="header-logo">NINAYE</Link>
+      <Link href="/" className="header-logo">
+        Ninaye
+        <span className="visually-hidden"> webshop voor uv bestendige handschoenen</span>
+      </Link>
 
-      <a href="/search" className="header-search">
+      <button className="header-search">
         <Image src="/icons/search.png" alt="Zoeken" width={24} height={24} />
-      </a>
-      <a href="/cart" className="header-cart">
+      </button>
+      <Link href="/cart" className="header-cart">
         <Image src="/icons/shopping-cart.png" alt="Winkelwagen" width={24} height={24} />
-      </a>
+      </Link>
     </header>
   );
-}
+} 
