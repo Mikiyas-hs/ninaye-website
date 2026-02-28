@@ -10,7 +10,7 @@ export default function Header() {
       </button>
 
       <Link href="/" className="header-logo">
-        Ninaye
+        NINAYE
         <span className="visually-hidden"> webshop voor uv bestendige handschoenen</span>
       </Link>
 
