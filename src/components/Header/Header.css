@@ -1,0 +1,56 @@
+.header {
+  position: sticky;
+  top: 0;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  margin: 0 1rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 0.5rem;
+  color: var(--color-white);
+  height: 12vh;
+
+  .header-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-family: var(--font-nova-round);
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+  }
+
+  img {
+    filter: invert(1);
+  }
+
+  .header-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-search {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-cart {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+}
