@@ -10,6 +10,7 @@
   padding: 1.25rem 0.5rem;
   color: var(--color-white);
   height: 12vh;
+  transition: color 0.3s ease, border-radius 0.3s ease;
 
   .header-logo {
     position: absolute;
@@ -31,10 +32,31 @@
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+
+    .icon-hamburger,
+    .icon-close {
+      grid-area: 1 / 1;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .icon-close {
+      opacity: 0;
+      transform: rotate(-90deg);
+    }
+
+    &.is-open {
+      .icon-hamburger {
+        opacity: 0;
+        transform: rotate(90deg);
+      }
+
+      .icon-close {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+    }
   }
 
   .header-search {
@@ -53,4 +75,53 @@
     align-items: center;
   }
 
+  &:has(~ .header-nav.header-nav--open) {
+    background: linear-gradient(to right, var(--color-beige), var(--color-lightgray));
+    border-radius: 1rem 1rem 0 0;
+    color: var(--color-black);
+
+    img {
+      filter: invert(0);
+    }
+  }
+}
+
+.header-nav {
+  position: fixed;
+  top: 12vh;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  border-radius: 1rem;
+  z-index: 9;
+  background: linear-gradient(to right, var(--color-beige), var(--color-lightgray));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  visibility: hidden;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0 round 1rem);
+  transition: clip-path 0.3s ease, visibility 0.3s;
+
+  &.header-nav--open {
+    visibility: visible;
+    pointer-events: auto;
+    clip-path: inset(0 round 1rem);
+  }
+
+  a {
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem 0;
+    font-size: 1.5rem;
+    color: var(--color-black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-black);
+
+    &:first-child {
+      border-top: 1px solid var(--color-black);
+    }
+  }
 }
