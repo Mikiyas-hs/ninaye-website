@@ -20,6 +20,11 @@ export const metadata = {
   description: "Webshop where you can buy your UV-protected gloves",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
