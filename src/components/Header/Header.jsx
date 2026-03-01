@@ -1,22 +1,15 @@
-'use client'
-
 import Link from "next/link";
 import Image from "next/image";
 import "./Header.css";
 
 export default function Header() {
-  function handleMenuToggle(e) {
-    const nav = document.querySelector('.header-nav');
-    nav.classList.toggle('header-nav--open');
-    e.currentTarget.classList.toggle('is-open');
-  }
-
   return (
 <header className="header">
-        <button className="header-menu-btn" onClick={handleMenuToggle}>
+        <input type="checkbox" id="nav-toggle" className="nav-toggle" />
+        <label className="header-menu-btn" htmlFor="nav-toggle">
           <Image className="icon-hamburger" src="/icons/hamburger.png" alt="Open navigatiemenu" width={40} height={40} />
           <Image className="icon-close" src="/icons/close.png" alt="Sluit navigatiemenu" width={24} height={24} />
-        </button>
+        </label>
 
         <h1 className="header-logo">
           <Link href="/">
