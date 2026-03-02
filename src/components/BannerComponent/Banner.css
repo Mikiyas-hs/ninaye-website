@@ -33,11 +33,6 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .banner {
-    margin: 1rem 3rem;
-  }
-}
 
 @keyframes typing {
   from { max-width: 0; }
