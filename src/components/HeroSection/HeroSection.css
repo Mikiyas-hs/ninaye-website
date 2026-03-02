@@ -79,9 +79,6 @@
     height: 90vh;
   }
 
-  @media (min-width: 1024px) {
-    margin: 0 3rem;
-  }
 }
 
 @keyframes shine {
