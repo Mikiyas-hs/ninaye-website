@@ -18,12 +18,14 @@ body {
   display: grid;
   grid-template-columns: 1rem 1fr 1rem;
   grid-template-rows: auto 1rem 1fr;
+  align-items: start;
   font-family: var(--font-metrophobic), sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
 }
 
-main {
+main,
+body > div:has(h1.next-error-h1) {
   grid-column: 2;
   grid-row: 3;
 }
