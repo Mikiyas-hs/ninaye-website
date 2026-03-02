@@ -21,11 +21,6 @@
     padding: 1.25rem 2.5rem;
   }
 
-  @media (min-width: 1150px) {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
   .header-logo {
     position: absolute;
     left: 50%;
@@ -69,11 +64,13 @@
     .icon-hamburger,
     .icon-close {
       grid-area: 1 / 1;
+      width: 32px;
+      height: 32px;
       transition: opacity 0.35s ease, transform 0.35s ease;
 
-      @media (max-width: 700px) {
-        width: 32px;
-        height: 32px;
+      @media (min-width: 700px) {
+        width: 40px;
+        height: 40px;
       }
     }
 
@@ -91,7 +88,6 @@
     padding: 0;
     display: flex;
     align-items: center;
-
   }
 
   .header-cart {
@@ -102,9 +98,12 @@
 
   .header-search img,
   .header-cart img {
-    @media (max-width: 700px) {
-      width: 20px;
-      height: 20px;
+    width: 20px;
+    height: 20px;
+
+    @media (min-width: 700px) {
+      width: 24px;
+      height: 24px;
     }
   }
 
@@ -139,7 +138,7 @@
 
 .header-nav {
   position: absolute;
-  top: 10vh;
+  top: 8vh;
   left: 0;
   right: 0;
   height: calc(100dvh - 21vh);
@@ -156,18 +155,30 @@
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.3s ease, visibility 0.3s;
 
-  a {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: contents;
+  }
+
+  li {
     width: 100%;
+    display: flex;
+  }
+
+  li a {
+    flex: 1;
     text-align: center;
     padding: 1.25rem 0;
     font-size: 1.5rem;
     color: var(--color-black);
     text-decoration: none;
     border-bottom: 1px solid var(--color-black);
+  }
 
-    &:first-child {
-      border-top: 1px solid var(--color-black);
-    }
+  li:first-child a {
+    border-top: 1px solid var(--color-black);
   }
 
   @media (min-width: 1050px) {
@@ -182,8 +193,15 @@
     gap: 2.75rem;
     overflow: visible;
 
-    a {
+    li {
       width: auto;
+    }
+
+    li:first-child a {
+      border-top: none;
+    }
+
+    li a {
       padding: 0;
       color: var(--color-white);
       border: none;
@@ -205,10 +223,6 @@
       &:hover::after {
         width: 100%;
       }
-
-      &:first-child {
-        border-top: none;
-      }
     }
   }
 
@@ -218,14 +232,12 @@
     flex: 1;
     justify-content: flex-start;
 
-    a {
-      &:nth-child(4) {
-        margin-left: auto;
-      }
+    li:nth-child(4) {
+      margin-left: auto;
+    }
 
-      &:last-child {
-        margin-right: 1.5rem;
-      }
+    li:last-child {
+      margin-right: 1.5rem;
     }
   }
 }
