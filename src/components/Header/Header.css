@@ -1,9 +1,8 @@
 .header {
   position: sticky;
   top: 0;
-  grid-column: 1 / -1;
+  grid-column: 2;
   grid-row: 3;
-  margin: 0 1rem;
   z-index: 10;
   display: flex;
   align-items: center;
@@ -13,7 +12,6 @@
   transition: color 0.3s ease, border-radius 0.3s ease;
 
   @media (min-width: 700px) {
-    margin: 0 3rem;
     padding: 1.25rem 1.5rem;
   }
 
@@ -136,6 +134,16 @@
   }
 }
 
+body:not(:has(.hero)) .header {
+  background: linear-gradient(to right, var(--color-beige), var(--color-lightgray));
+  color: var(--color-black);
+  border-radius: 1rem;
+
+  img {
+    filter: invert(0);
+  }
+}
+
 .header-nav {
   position: absolute;
   top: 8vh;
@@ -203,7 +211,7 @@
 
     li a {
       padding: 0;
-      color: var(--color-white);
+      color: inherit;
       border: none;
       text-transform: uppercase;
       letter-spacing: 0.08em;
