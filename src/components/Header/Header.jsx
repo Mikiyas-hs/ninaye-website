@@ -26,12 +26,12 @@ export default function Header() {
         </Link>
 
       <nav className="header-nav">
-        <a href="/collectie">Collectie</a>
-        <a href="/uv-gloves">UV-gloves</a>
-        <a href="/about">About</a>
-        <a href="/retour">Retour</a>
-        <a href="/contact">Contact</a>
-        <a href="/faq">FAQ</a>
+        <li><a href="/collectie">Collectie</a></li>
+        <li><a href="/uv-gloves">UV-gloves</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/retour">Retour</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/faq">FAQ</a></li>
       </nav>
 </header>
   );
