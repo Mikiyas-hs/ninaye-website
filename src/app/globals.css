@@ -58,3 +58,9 @@ h2 {
 p {
   font-size: 1rem;
 }
+
+/* ----accesibility button----- */
+
+:root:has(body.a11y-text-scale) {
+  font-size: 150%;
+}
