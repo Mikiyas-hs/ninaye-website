@@ -64,3 +64,44 @@ p {
 :root:has(body.a11y-text-scale) {
   font-size: 150%;
 }
+
+body.a11y-high-contrast {
+  background-color: #000;
+  color: #ffff00;
+
+  & a, & button, & h1, & h2, & h3, & p {
+    color: #ffff00;
+  }
+
+  & a {
+    text-decoration: underline;
+  }
+
+  & .hero::after {
+    background: linear-gradient(to top, #000 0%, transparent 60%);
+  }
+
+  & .banner {
+    background: linear-gradient(to right, #000, #F1F0ED);
+
+    & p {
+      color: #ffff00;
+      border-right-color: #ffff00;
+    }
+  }
+}
+
+@media (prefers-contrast: more) {
+  body {
+    background-color: #000;
+    color: #ffff00;
+  }
+
+  a, button, h1, h2, h3, p {
+    color: #ffff00;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
