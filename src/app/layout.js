@@ -1,6 +1,7 @@
 import { Metrophobic } from "next/font/google";
 import "./globals.css";
 import Banner from "@/components/BannerComponent/Banner";
+import AccessibilityButton from "@/components/AccessibilityButton/AccessibilityButton";
 
 const metrophobic = Metrophobic({
   variable: "--font-metrophobic",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={metrophobic.variable}>
         <Banner />
+        <AccessibilityButton />
         {children}
       </body>
     </html>
