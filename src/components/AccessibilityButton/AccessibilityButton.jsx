@@ -24,6 +24,7 @@ export default function AccessibilityButton() {
     <aside className="a11y-container">
       <button data-id="text-scale" className="a11y-button">Tekstvergroting</button>
       <button data-id="high-contrast" className="a11y-button">Hoog contrast</button>
+      <button data-id="reduce-motion" className="a11y-button">Animaties uit</button>
     </aside>
   );
 }
