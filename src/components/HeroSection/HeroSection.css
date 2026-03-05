@@ -1,8 +1,7 @@
 .hero {
   position: relative;
-  border-radius: 1rem;
+  border-radius: var(--radius-card);
   overflow: hidden;
-  top: 1em;
 
   .hero-image {
     width: 100%;
@@ -25,7 +24,7 @@
   h1 {
     position: absolute;
     bottom: 6rem;
-    left: 2rem;
+    left: 1rem;
     color: var(--color-white);
     z-index: 1;
 
@@ -37,13 +36,13 @@
   .hero-cta {
     position: absolute;
     bottom: 2rem;
-    left: 2rem;
+    left: 1rem;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1.5rem;
     border: 2px solid var(--color-white);
-    border-radius: 5em;
+    border-radius: var(--radius-cta);
     color: var(--color-white);
     text-decoration: none;
     font-size: 1rem;
@@ -80,9 +79,6 @@
     height: 90vh;
   }
 
-  @media (min-width: 1024px) {
-    margin: 0 3rem;
-  }
 }
 
 @keyframes shine {
