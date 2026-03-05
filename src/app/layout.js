@@ -24,8 +24,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${metrophobic.variable} ${openDyslexic.variable}`}>
-        <Banner />
         <AccessibilityButton />
+        <Banner />
         {children}
       </body>
     </html>
