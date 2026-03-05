@@ -69,8 +69,12 @@ body.a11y-high-contrast {
   background-color: #000;
   color: #ffff00;
 
-  & a, & button, & h1, & h2, & h3, & p {
+  & a, & button, & h1, & h2, & h3, & p, & .hero-cta {
     color: #ffff00;
+  }
+
+  & .hero-cta {
+    border-color: #ffff00;
   }
 
   & a {
@@ -79,6 +83,21 @@ body.a11y-high-contrast {
 
   & .hero::after {
     background: linear-gradient(to top, #000 0%, transparent 60%);
+  }
+
+  & .a11y-button {
+    background-color: #ffff00;
+    color: #000;
+    border-color: #000;
+  }
+
+  & .a11y-toggle {
+    background-color: #000;
+    border-color: #ffff00;
+
+    &::before {
+      filter: brightness(0) invert(1) sepia(100%) saturate(10000%);
+    }
   }
 
   & .banner {
