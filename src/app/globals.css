@@ -109,6 +109,14 @@ body.a11y-reduce-motion *::after {
   }
 }
 
+body.a11y-dyslexia {
+  font-family: var(--font-opendyslexic);
+}
+
+:root:has(body.a11y-dyslexia) {
+  font-size: 87.5%;
+}
+
 @media (prefers-contrast: more) {
   body {
     background-color: #000;
