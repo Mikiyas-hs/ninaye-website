@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  border-radius: 1rem;
+  border-radius: var(--radius-card);
   overflow: hidden;
 
   .hero-image {
@@ -42,7 +42,7 @@
     gap: 0.75rem;
     padding: 0.75rem 1.5rem;
     border: 2px solid var(--color-white);
-    border-radius: 5em;
+    border-radius: var(--radius-cta);
     color: var(--color-white);
     text-decoration: none;
     font-size: 1rem;

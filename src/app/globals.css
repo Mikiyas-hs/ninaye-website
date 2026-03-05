@@ -5,6 +5,8 @@
   --color-pink: #FDB3DA;
   --color-black: #000000;
   --color-white: #FFFFFF;
+  --radius-card: 1rem;
+  --radius-cta: 5em;
 }
 
 *, *::before, *::after {

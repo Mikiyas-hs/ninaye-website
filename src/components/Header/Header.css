@@ -107,7 +107,7 @@
 
   &:has(#nav-toggle:checked) {
     background: linear-gradient(to right, var(--color-beige), var(--color-lightgray));
-    border-radius: 1rem 1rem 0 0;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
     color: var(--color-black);
 
     img {
@@ -137,7 +137,7 @@
 body:not(:has(.hero)) .header {
   background: linear-gradient(to right, var(--color-beige), var(--color-lightgray));
   color: var(--color-black);
-  border-radius: 1rem;
+  border-radius: var(--radius-card);
 
   img {
     filter: invert(0);
@@ -150,7 +150,7 @@ body:not(:has(.hero)) .header {
   left: 0;
   right: 0;
   height: calc(100dvh - 21vh);
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
   z-index: 9;
   background: linear-gradient(to right, var(--color-beige), var(--color-lightgray));
   display: flex;
