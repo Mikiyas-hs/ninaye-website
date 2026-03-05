@@ -17,7 +17,7 @@ const novaRound = Nova_Round({
 
 export const metadata = {
   title: "Ninaye",
-  description: "Webshop where you can buy your UV-protected gloves",
+  description: "Webshop voor UV-beschermende handschoenen",
 };
 
 export const viewport = {
@@ -27,7 +27,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="nl">
       <body className={`${metrophobic.variable} ${novaRound.variable}`}>
         <Banner />
         <Header />

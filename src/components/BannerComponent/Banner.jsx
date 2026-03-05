@@ -3,7 +3,7 @@ import "./Banner.css";
 export default function Banner() {
   return (
     <aside className="banner">
-      <p>FREE EU SHIPPING ON ORDERS OVER €70.</p>
+      <p>GRATIS EU-VERZENDING BIJ BESTELLINGEN VANAF €70.</p>
     </aside>
   );
 }
