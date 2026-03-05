@@ -117,6 +117,13 @@ body.a11y-dyslexia {
   font-size: 87.5%;
 }
 
+body.a11y-reading-aid {
+  & h1, & h2, & h3, & p, & a, & button, & .hero-cta {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
 @media (prefers-contrast: more) {
   body {
     background-color: #000;
