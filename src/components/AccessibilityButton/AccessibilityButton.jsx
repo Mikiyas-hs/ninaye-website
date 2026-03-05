@@ -26,6 +26,7 @@ export default function AccessibilityButton() {
       <button data-id="high-contrast" className="a11y-button">Hoog contrast</button>
       <button data-id="reduce-motion" className="a11y-button">Animaties uit</button>
       <button data-id="dyslexia" className="a11y-button">Dyslexie font</button>
+      <button data-id="reading-aid" className="a11y-button">Leeshulp</button>
     </aside>
   );
 }
