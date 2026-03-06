@@ -1,0 +1,98 @@
+.a11y-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 5em;
+  border: 3px solid var(--color-beige);
+  background-color: var(--color-lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+
+  &::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background: url('/icons/accessibility.png') center / contain no-repeat;
+  }
+
+  &:hover {
+    border-color: #6B3A1F;
+  }
+
+  &.is-open {
+    border-color: #6B3A1F;
+    transform: rotate(180deg);
+  }
+}
+
+.a11y-container {
+  position: fixed;
+  bottom: 6rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+
+  @media (min-width: 1024px) {
+    bottom: 2rem;
+    right: 5.75rem;
+  }
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+.a11y-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.a11y-button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 5em;
+  border: 2px solid #6B3A1F;
+  background-color: var(--color-lightgray);
+  color: var(--color-black);
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &.is-active {
+    background-color: #6B3A1F;
+    color: var(--color-white);
+    border-color: #6B3A1F;
+  }
+}
