@@ -101,6 +101,12 @@ body.a11y-high-contrast {
     background-color: var(--color-contrast-yellow);
     color: #000;
     border-color: #000;
+
+    &.is-active {
+      background-color: #000;
+      color: var(--color-contrast-yellow);
+      border-color: var(--color-contrast-yellow);
+    }
   }
 
   & .a11y-toggle {
@@ -114,12 +120,38 @@ body.a11y-high-contrast {
 
   & .banner {
     background: linear-gradient(to right, #000, #F1F0ED);
+  }
 
-    & p {
-      color: var(--color-contrast-yellow);
-      border-right-color: var(--color-contrast-yellow);
+  & .header img {
+    filter: brightness(0) invert(1) sepia(100%) saturate(10000%);
+  }
+
+  & .header:has(#nav-toggle:checked) {
+    background: #000;
+
+    img {
+      filter: brightness(0) invert(1) sepia(100%) saturate(10000%);
     }
   }
+
+  & .header-nav {
+    background: #000;
+
+    li a {
+      color: var(--color-contrast-yellow);
+      border-color: var(--color-contrast-yellow);
+    }
+  }
+
+  &:not(:has(.hero)) .header {
+    background: #000;
+    color: var(--color-contrast-yellow);
+  }
+}
+
+body.a11y-high-contrast .banner p {
+  color: var(--color-contrast-yellow);
+  border-right-color: var(--color-contrast-yellow);
 }
 
 body.a11y-reduce-motion *,
@@ -157,9 +189,18 @@ body.a11y-dyslexia {
 }
 
 body.a11y-reading-aid {
-  & h1, & h2, & h3, & p, & a, & button, & .hero-cta {
+  & h1, & h2, & h3, & p, & a, & button, & .hero-cta, & .header-menu-btn, & .header-search {
     background-color: #fff;
     color: #000;
+  }
+
+  & .banner p {
+    background-color: #fff;
+    color: #000;
+  }
+
+  & .header img {
+    filter: invert(0);
   }
 }
 
@@ -176,6 +217,8 @@ body.a11y-reading-aid {
   a {
     text-decoration: underline;
   }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
