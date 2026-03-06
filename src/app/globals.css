@@ -6,6 +6,8 @@
   --color-black: #000000;
   --color-white: #FFFFFF;
   --color-contrast-yellow: #ffff00;
+  --radius-card: 1rem;
+  --radius-cta: 5em;
 }
 
 *, *::before, *::after {
@@ -15,15 +17,20 @@
 }
 
 body {
+  overflow-x: clip;
   display: grid;
   grid-template-columns: 1rem 1fr 1rem;
+  grid-template-rows: auto 1rem 1fr;
+  align-items: start;
   font-family: var(--font-metrophobic), sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
 }
 
-main {
+main,
+body > div:has(h1.next-error-h1) {
   grid-column: 2;
+  grid-row: 3;
 }
 
 h1 {
@@ -169,4 +176,14 @@ body.a11y-reading-aid {
   a {
     text-decoration: underline;
   }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }

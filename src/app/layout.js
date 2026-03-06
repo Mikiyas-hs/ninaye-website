@@ -13,19 +13,28 @@ const metrophobic = Metrophobic({
 const openDyslexic = localFont({
   src: "../../public/fonts/OpenDyslexic-Regular.otf",
   variable: "--font-opendyslexic",
+const novaRound = Nova_Round({
+  variable: "--font-nova-round",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata = {
   title: "Ninaye",
-  description: "Webshop where you can buy your UV-protected gloves",
+  description: "Webshop voor UV-beschermende handschoenen",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${metrophobic.variable} ${openDyslexic.variable}`}>
-        <AccessibilityButton />
+    <html lang="nl">
+      <body className={`${metrophobic.variable} ${novaRound.variable}`}>
         <Banner />
+        <Header />
         {children}
       </body>
     </html>
