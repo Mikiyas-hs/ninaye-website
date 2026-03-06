@@ -63,7 +63,11 @@ p {
 /* ----accesibility button----- */
 
 :root:has(body.a11y-text-scale) {
-  font-size: 150%;
+  font-size: 125%;
+
+  @media (min-width: 700px) {
+    font-size: 150%;
+  }
 }
 
 body.a11y-high-contrast {
@@ -134,7 +138,15 @@ body.a11y-dyslexia {
 }
 
 :root:has(body.a11y-dyslexia) {
-  font-size: 87.5%;
+  font-size: 80%;
+}
+
+:root:has(body.a11y-text-scale):has(body.a11y-dyslexia) {
+  font-size: 100%;
+
+  @media (min-width: 700px) {
+    font-size: 120%;
+  }
 }
 
 body.a11y-reading-aid {
